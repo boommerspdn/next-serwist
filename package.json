@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "start:https": "node server.ts",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^6.9.0",
