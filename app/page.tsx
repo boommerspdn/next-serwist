@@ -1,32 +1,20 @@
-import type { Metadata } from "next";
+import prisma from "./../lib/prisma";
+export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
-  title: "Home",
-};
-
-async function getPosts() {
-  const res = await fetch(
-    "https://jsonplaceholder.typicode.com/posts?_limit=5",
-    {
-      cache: "no-store", // for SSR
-    },
-  );
-  return res.json();
-}
-
-export default async function Page() {
-  const posts = await getPosts();
+export default async function Home() {
+  const users = await prisma.user.findMany();
   return (
-    <div>
-      <h1>Posts from JSONPlaceholder</h1>
-      <ul>
-        {posts.map((post: any) => (
-          <li key={post.id}>
-            <strong>{post.title}</strong>
-            <p>{post.body}</p>
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center -mt-16">
+      <h1 className="text-4xl font-bold mb-8 font-[family-name:var(--font-geist-sans)] text-[#333333]">
+        Superblog
+      </h1>
+      <ol className="list-decimal list-inside font-[family-name:var(--font-geist-sans)]">
+        {users.map((user) => (
+          <li key={user.id} className="mb-2">
+            {user.name}
           </li>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }

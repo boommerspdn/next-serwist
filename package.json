@@ -5,12 +5,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^6.9.0",
+    "@prisma/extension-accelerate": "^2.0.1",
     "@serwist/next": "latest",
     "next": "15.3.3",
     "react": "19.1.0",
@@ -21,6 +23,8 @@
     "@types/node": "24.0.1",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
+    "prisma": "^6.9.0",
+    "tsx": "^4.20.3",
     "typescript": "5.8.3"
   }
 }
