@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "https": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -17,7 +18,8 @@
     "next": "15.3.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "serwist": "latest"
+    "serwist": "latest",
+    "swr": "^2.3.3"
   },
   "devDependencies": {
     "@types/node": "24.0.1",

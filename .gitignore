@@ -26,6 +26,8 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+.env
+
 # local env files
 .env*.local
 
@@ -40,3 +42,5 @@ next-env.d.ts
 public/sw*
 public/swe-worker*
 /app/generated/prisma
+
+certificates
