@@ -9,6 +9,7 @@
     "https": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
+    "start:https": "node server.ts",
     "lint": "next lint"
   },
   "dependencies": {
@@ -26,7 +27,6 @@
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "prisma": "^6.9.0",
-    "tsx": "^4.20.3",
     "typescript": "5.8.3"
   }
 }
